@@ -135,10 +135,7 @@ def isIn(l,e):
     '''
     Returns true if element e is in list l
     '''
-    toReturn = ''
-    if l in e  
-        return True
-    return False
+    return e in l
 
 def randomElement(l):
     '''
@@ -161,23 +158,24 @@ def reverseList(l):
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
     toReturn = []
-    toReturn = l.reverse()
+    listLength = len(l)
+    for i in range(listLength):
+        toReturn.append(l[listLength - i - 1])
     return toReturn
 
 def shuffleList(l):
     '''
     Returns a list which has all the elements of l in a random order
     '''
-    toReturn = []
-    toReturn = random.shuffle(l)
-    return toReturn
+    random.shuffle(l)
+    return l
 
 def listUntil(a):
     '''
     Returns a list contains numbers from 0 to a
     '''
     toReturn = []
-    for i in range(a + 1)
+    for i in range(a + 1):
         toReturn.append(i)
     return toReturn
 
